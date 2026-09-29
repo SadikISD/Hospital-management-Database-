@@ -1,0 +1,93 @@
+--SQL 1/
+DECLARE
+    medicine_stock  NUMBER := 75;
+    medicine2_stock NUMBER := 0;
+BEGIN
+    IF medicine_stock <= 0 THEN
+        DBMS_OUTPUT.PUT_LINE('Medicine is out of stock.');
+    ELSIF medicine_stock <= 10 THEN
+        DBMS_OUTPUT.PUT_LINE('Medicine stock is critically low.');
+        DBMS_OUTPUT.PUT_LINE('Stock available: ' || medicine_stock);
+    ELSIF medicine_stock <= 50 THEN
+        DBMS_OUTPUT.PUT_LINE('Medicine stock is low.');
+        DBMS_OUTPUT.PUT_LINE('Stock available: ' || medicine_stock);
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Medicine is available.');
+        DBMS_OUTPUT.PUT_LINE('Stock available: ' || medicine_stock);
+    END IF;
+
+    IF medicine2_stock <= 0 THEN
+        DBMS_OUTPUT.PUT_LINE('Medicine 2 is out of stock.');
+    ELSIF medicine2_stock <= 10 THEN
+        DBMS_OUTPUT.PUT_LINE('Medicine 2 stock is critically low.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Medicine 2 is available.');
+    END IF;
+END;
+/
+
+--SQL 2/
+DECLARE
+    patient1_age NUMBER ;
+    patient2_age NUMBER ;
+BEGIN
+  patient1_age := 25;
+  patient2_age := 14;
+
+    IF patient1_age >= 60 THEN
+        DBMS_OUTPUT.PUT_LINE('Patient 1 is a Senior.');
+    ELSIF patient1_age >= 18 THEN
+        DBMS_OUTPUT.PUT_LINE('Patient 1 is a Adult.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Patient 1 is a Child.');
+    END IF;
+
+    IF patient2_age >=60 THEN
+        DBMS_OUTPUT.PUT_LINE('Patient 2 is a Senior.');
+    ELSIF patient2_age >= 18 THEN
+        DBMS_OUTPUT.PUT_LINE('Patient 2 is a Adult.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Patient 2 is a Child.');
+    END IF;
+END;
+/
+
+--SQL 3/
+DECLARE
+    doctor_name VARCHAR2(100);
+    specialization VARCHAR2(100);
+BEGIN
+  doctor_name := 'John Smith';
+  specialization := 'Cardiology';
+
+  DBMS_OUTPUT.PUT_LINE('Doctor: ' || doctor_name);
+  DBMS_OUTPUT.PUT_LINE('specialization: ' || specialization);
+END;
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
